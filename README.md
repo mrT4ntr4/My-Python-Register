@@ -57,11 +57,11 @@ y = 12
 
 print x+str(y)
 ```
-#### II. Using % Op.
+#### II. Using % Operator
 ```python
 print "%s%s"%(x,y)
 ```
-#### III. Using format fn. Used by me here
+#### III. Using format function
 ```python
 print "{}{}".format(x,y)
 ```
@@ -263,7 +263,7 @@ print cmp(dup,kb2)
 keyboard.popitem() # pops out the first (key,value) pair
 print keyboard
 
-keyboard.clear() # Deletes every key,value pair present in the dictoinary
+keyboard.clear() # Deletes every (key,value) pair present in the dictoinary
 print keyboard
 ```
 ```console
