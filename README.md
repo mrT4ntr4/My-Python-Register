@@ -33,7 +33,7 @@ if __name__ == '__main__':
  from greet import msg # specific functions can also be imported
  msg()
 ```
-## Strings
+## 1. Testing Strings
 ``` python
 str_hello='hello_World'
 print(str_hello[0:5])
@@ -47,36 +47,44 @@ print ''.join(reversed(str_hello)) #### To reverse a string easily
 Output : list12
 ```
 
-##### I. Using str() fn.
+#####1 Using str() fn.
 ``` python
 x = 'list'
 y = 12
 
 print x+str(y)
 ```
-##### II. Using % Op.
+#####2 Using % Op.
 ``` python
 print "%s%s"%(x,y)
 ```
-##### III. Using format fn. Used by me here
+#####3 Using format fn. Used by me here
 ``` python
 print "{}{}".format(x,y)
 ```
 
-## Sets & FrozenSets
+## 2. Sets & FrozenSets
 ``` python
 set1 = {1,2,3,1,2,5,2,8,}
 print set1
-
+```
+``` console
+=> set([8, 1, 2, 3, 5])
+```
 set2 = set('hello')
 set2.add('y') ####Can add new elements easily
 print set2
-
+``` console
+=> set(['y', 'h', 'e', 'l', 'o'])
+```
 set3 = frozenset('lulzsec') ####Cannot add new elements
-print "No. of Elements in FrozenSet_set3 ==> {}".format(len(set3))
+print "No. of Elements in FrozenSet_set3 = {}".format(len(set3))
+```
+``` console
+=> No. of Elements in FrozenSet_set3 ==> 6
 ```
 
-## Complex Numbers and other data types
+## 3. Testing Complex Numbers and other data types
 ``` python
 comp_num1 = 3 + 13j
 print comp_num1
@@ -94,7 +102,7 @@ print "Float :: {}".format(float_num)
 long_num = 111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111L
 print "Long :: {}".format(long_num)
 ```
-## Lists
+## 4. Lists
 ``` python
 list = [11,22,11,'hello']
 list.append('22') #### appending single element
@@ -135,5 +143,3 @@ for number in list3: #### Iterating through a list
 	print number
 
 ```
-
-
