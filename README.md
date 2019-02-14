@@ -6,17 +6,17 @@ Noting down my flow with Python
 
 
 ## Help about a module
-``` python
+```python
 help('modules') # This lists all built-in modules
 module.__doc__ # To see some documentation about a specific module
 ```
 ## To Check BuiltIn Functions in a module
-``` python
+```python
 import hashlib # Need to import the module first
 dir(hashlib)
 ```
 ## Importing Modules
-``` python
+```python
 ####  greet.py
 def msg():
  return 'Hey Wassup'
@@ -33,8 +33,8 @@ if __name__ == '__main__':
  from greet import msg # specific functions can also be imported
  msg()
 ```
-## 1. Testing Strings
-``` python
+## Strings
+```python
 str_hello='hello_World'
 print(str_hello[0:5])
 
@@ -43,49 +43,47 @@ print type(str_hello) #### To check the dataType
 print ''.join(reversed(str_hello)) #### To reverse a string easily
 ```
 #### Ways to Concatenate string and int 
-``` console
+```console
 Output : list12
 ```
 
-#####1 Using str() fn.
-``` python
+##### I. Using str() fn.
+```python
 x = 'list'
 y = 12
 
 print x+str(y)
 ```
-#####2 Using % Op.
-``` python
+##### II. Using % Op.
+```python
 print "%s%s"%(x,y)
 ```
-#####3 Using format fn. Used by me here
-``` python
+##### III. Using format fn. Used by me here
+```python
 print "{}{}".format(x,y)
 ```
 
-## 2. Sets & FrozenSets
-``` python
+## Sets & FrozenSets
+```python
 set1 = {1,2,3,1,2,5,2,8,}
 print set1
-```
-``` console
-=> set([8, 1, 2, 3, 5])
-```
+
 set2 = set('hello')
 set2.add('y') ####Can add new elements easily
 print set2
-``` console
-=> set(['y', 'h', 'e', 'l', 'o'])
-```
+
 set3 = frozenset('lulzsec') ####Cannot add new elements
 print "No. of Elements in FrozenSet_set3 = {}".format(len(set3))
 ```
-``` console
-=> No. of Elements in FrozenSet_set3 ==> 6
+
+```console
+set([8, 1, 2, 3, 5])
+set(['y', 'h', 'e', 'l', 'o'])
+No. of Elements in FrozenSet_set3 = 6
 ```
 
-## 3. Testing Complex Numbers and other data types
-``` python
+## Complex Numbers and other data types
+```python
 comp_num1 = 3 + 13j
 print comp_num1
 print(type(comp_num1))
@@ -102,8 +100,21 @@ print "Float :: {}".format(float_num)
 long_num = 111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111L
 print "Long :: {}".format(long_num)
 ```
+
+```console
+No. of Elements in FrozenSet_set3 ==> 6
+(3+13j)
+<type 'complex'>
+(2+5j)
+Real Part (comp_num2) :: 2.0
+Imaginary Part (comp_num2) :: 5.0
+Complex Conjugate (comp_num2) :: (2-5j)
+Float :: 11122.2
+Long :: 111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+```
+
 ## 4. Lists
-``` python
+```python
 list = [11,22,11,'hello']
 list.append('22') #### appending single element
 print list
@@ -115,7 +126,15 @@ list.insert(1, 'MyList') #### adding new element at a specific index
 print list
 
 print list[0:3] #### Outputs first 3 elements
+```
 
+```console
+[11, 22, 11, 'hello', '22']
+[11, 22, 11, 'hello', '22', 55, 'world']
+[11, 'MyList', 22, 11, 'hello', '22', 55, 'world']
+[11, 'MyList', 22]
+```
+```python
 list1=[1,2,3,4,5]
 list2=[1,2,3]
 list3=list1+list2
@@ -138,8 +157,21 @@ list3.reverse() #### Reverses a list using function
 print list3
 
 print list1[::-1]  #### Reverse a list by Slicing
-
+```
+```console
+[1, 2, 3, 4, 5, 1, 2, 3]
+[1, 1, 2, 2, 3, 3, 4, 5]
+8
+[1, 2, 2, 3, 3, 4, 5]
+[1, 2, 2, 3, 3, 4]
+2
+[4, 3, 3, 2, 2, 1]
+[5, 4, 3, 2, 1]
+```
+```python
 for number in list3: #### Iterating through a list
 	print number
 
 ```
+
+
