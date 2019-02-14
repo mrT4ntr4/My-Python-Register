@@ -3,6 +3,8 @@ Noting down my flow with Python
 
 [![GitHub version](https://badge.fury.io/gh/boennemann%2Fbadges.svg)](http://badge.fury.io/gh/boennemann%2Fbadges)
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+![stability-wip](https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg)
+
 
 
 ## Help about a module
@@ -139,6 +141,8 @@ list2=[1,2,3]
 list3=list1+list2
 print list3 # Concatenating 2 lists
 
+print list2*3 # prints list2 2 times itself
+
 list3.sort() # Sorting Lists
 print list3
 
@@ -177,4 +181,90 @@ for number in list3: # Iterating through a list
 ```
 ```console
 4 3 3 2 2 1
+```
+
+## Dictionaries
+
+```python
+keyboard = {1:'CTRL', 2:'SHIFT', 4:'ENTER' }
+print keyboard # lists contents of dictionary
+
+print keyboard.values() # lists all values of all keys
+print keyboard.keys() # gathers list all keys
+```
+```console
+{1: 'CTRL', 2: 'SHIFT', 4: 'ENTER'}
+['CTRL', 'SHIFT', 'ENTER']
+[1, 2, 4]
+```
+
+### Accessing values
+
+```console
+Output : SHIFT
+```
+####  Using key
+```python
+print keyboard[2] 
+```
+#### Using get()
+```python
+print keyboard.get(2) 
+```
+
+### Deleting values
+```console
+[(1, 'CTRL'), (4, 'ENTER')]
+```
+#### Using del
+```python
+del keyboard[2] 
+```
+#### Using pop() 
+```python
+keyboard.pop(2) 
+```
+### Some Useful Built-In Functions
+```python
+print keyboard.items() # returns a *list of dict's (key,value) tuple pairs
+
+dup = keyboard.copy() # duplicates a predefined dict
+print dup
+
+print keyboard.has_key(2) # Checks for a key in dict, Return bool
+```
+```console
+[(1, 'CTRL'), (4, 'ENTER')]
+{1: 'CTRL', 4: 'ENTER'}
+False
+```
+
+```python
+keys = {1,2,3}
+value = 'NUMPAD'
+
+kb2 = dict.fromkeys(keys, value) # Using fromkeys to create a dict from a sequence
+print(kb2)
+
+print len(kb2) # Counts the no. of (key,value) pair
+
+print cmp(dup,kb2)
+# returns 0 if both dictionaries are equal, -1 if kb2 < dup and 1 if kb2 > dup.
+```
+```console
+{1: 'NUMPAD', 2: 'NUMPAD', 3: 'NUMPAD'}
+3
+-1
+```
+
+```python
+keyboard.popitem() # pops out the first (key,value) pair
+print keyboard
+
+keyboard.clear() # Deletes every key,value pair present in the dictoinary
+print keyboard
+```
+```console
+{4: 'ENTER'}
+{}
 ```
