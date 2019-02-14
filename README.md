@@ -17,18 +17,18 @@ dir(hashlib)
 ```
 ## Importing Modules
 ```python
-####  greet.py
+#  greet.py
 def msg():
  return 'Hey Wassup'
 
-#### welcome.py
+# welcome.py
 import greet
  greet.msg()
 
 import greet as g # Can be aliased
  g.msg() 
 
-### A module can be stand-alone runnable script.
+# A module can be stand-alone runnable script.
 if __name__ == '__main__':
  from greet import msg # specific functions can also be imported
  msg()
@@ -38,27 +38,27 @@ if __name__ == '__main__':
 str_hello='hello_World'
 print(str_hello[0:5])
 
-print type(str_hello) #### To check the dataType
+print type(str_hello) # To check the dataType
 
-print ''.join(reversed(str_hello)) #### To reverse a string easily
+print ''.join(reversed(str_hello)) # To reverse a string easily
 ```
-#### Ways to Concatenate string and int 
+### Ways to Concatenate string and int 
 ```console
 Output : list12
 ```
 
-##### I. Using str() fn.
+#### I. Using str() fn.
 ```python
 x = 'list'
 y = 12
 
 print x+str(y)
 ```
-##### II. Using % Op.
+#### II. Using % Op.
 ```python
 print "%s%s"%(x,y)
 ```
-##### III. Using format fn. Used by me here
+#### III. Using format fn. Used by me here
 ```python
 print "{}{}".format(x,y)
 ```
@@ -69,10 +69,10 @@ set1 = {1,2,3,1,2,5,2,8,}
 print set1
 
 set2 = set('hello')
-set2.add('y') ####Can add new elements easily
+set2.add('y') #Can add new elements easily
 print set2
 
-set3 = frozenset('lulzsec') ####Cannot add new elements
+set3 = frozenset('lulzsec') #Cannot add new elements
 print "No. of Elements in FrozenSet_set3 = {}".format(len(set3))
 ```
 
@@ -102,7 +102,6 @@ print "Long :: {}".format(long_num)
 ```
 
 ```console
-No. of Elements in FrozenSet_set3 ==> 6
 (3+13j)
 <type 'complex'>
 (2+5j)
@@ -113,19 +112,19 @@ Float :: 11122.2
 Long :: 111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
 ```
 
-## 4. Lists
+## Lists
 ```python
 list = [11,22,11,'hello']
-list.append('22') #### appending single element
+list.append('22') # appending single element
 print list
 
-list.extend([55,'world'])  #### appending more than 2 elements
+list.extend([55,'world'])  # appending more than 2 elements
 print list
 
-list.insert(1, 'MyList') #### adding new element at a specific index
+list.insert(1, 'MyList') # adding new element at a specific index
 print list
 
-print list[0:3] #### Outputs first 3 elements
+print list[0:3] # Outputs first 3 elements
 ```
 
 ```console
@@ -138,40 +137,44 @@ print list[0:3] #### Outputs first 3 elements
 list1=[1,2,3,4,5]
 list2=[1,2,3]
 list3=list1+list2
-print list3 #### Concatenating 2 lists
+print list3 # Concatenating 2 lists
 
-list3.sort() #### Sorting Lists
+list3.sort() # Sorting Lists
 print list3
 
-print len(list3) #### Counts length of list
+print len(list3) # Counts length of list
 
-list3.remove(1) #### Removes 1st item whose value is equal to specified
+list3.remove(1) # Removes 1st item whose value is equal to specified
 print list3
-
-list3.pop(6)  #### Removes element at index 6
-print list3
-
-print list3.count(3) #### Counts no. of times 3 appears
-
-list3.reverse() #### Reverses a list using function
-print list3
-
-print list1[::-1]  #### Reverse a list by Slicing
 ```
 ```console
 [1, 2, 3, 4, 5, 1, 2, 3]
 [1, 1, 2, 2, 3, 3, 4, 5]
 8
 [1, 2, 2, 3, 3, 4, 5]
+```
+```python
+list3.pop(6)  # Removes element at index 6
+print list3
+
+print list3.count(3) # Counts no. of times 3 appears
+
+list3.reverse() # Reverses a list using function
+print list3
+
+print list1[::-1]  # Reverse a list by Slicing
+```
+```console
 [1, 2, 2, 3, 3, 4]
 2
 [4, 3, 3, 2, 2, 1]
 [5, 4, 3, 2, 1]
 ```
 ```python
-for number in list3: #### Iterating through a list
-	print number
+for number in list3: # Iterating through a list
+	print number,  # note the , for printing in a single line
 
 ```
-
-
+```console
+4 3 3 2 2 1
+```
