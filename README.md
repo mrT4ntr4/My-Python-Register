@@ -153,6 +153,7 @@ print list3
 ```
 ```console
 [1, 2, 3, 4, 5, 1, 2, 3]
+[1, 2, 3, 1, 2, 3, 1, 2, 3]
 [1, 1, 2, 2, 3, 3, 4, 5]
 8
 [1, 2, 2, 3, 3, 4, 5]
@@ -203,11 +204,11 @@ print keyboard.keys() # gathers list all keys
 ```console
 Output : SHIFT
 ```
-####  Using key
+##### I. Using key
 ```python
 print keyboard[2] 
 ```
-#### Using get()
+##### II. Using get()
 ```python
 print keyboard.get(2) 
 ```
@@ -216,11 +217,11 @@ print keyboard.get(2)
 ```console
 [(1, 'CTRL'), (4, 'ENTER')]
 ```
-#### Using del
+##### I. Using del
 ```python
 del keyboard[2] 
 ```
-#### Using pop() 
+##### II. Using pop() 
 ```python
 keyboard.pop(2) 
 ```
