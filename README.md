@@ -142,7 +142,7 @@ list2=[1,2,3]
 list3=list1+list2
 print list3 # Concatenating 2 lists
 
-print list2*3 # prints list2 2 times itself
+print list2*3 # prints list2 3 times itself
 
 list3.sort() # Sorting Lists
 print list3
