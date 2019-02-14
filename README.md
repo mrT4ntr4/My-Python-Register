@@ -5,6 +5,8 @@ Noting down my flow with Python
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 ![stability-wip](https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg)
 
+![repo-logo](https://github.com/mrT4ntr4/My-Python-Register/blob/master/introToPython.webp)
+  
 
 
 ## Help about a module
