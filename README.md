@@ -33,7 +33,7 @@ if __name__ == '__main__':
  from greet import msg # specific functions can also be imported
  msg()
 ```
-## 1. Testing Strings
+## Strings
 ``` python
 str_hello='hello_World'
 print(str_hello[0:5])
@@ -44,23 +44,23 @@ print ''.join(reversed(str_hello)) #### To reverse a string easily
 ```
 #### Ways to Concatenate string and int 
 
-#####1 (Using str() fn.)
+##### I (Using str() fn.)
 ``` python
 x = 'list'
 y = 12
 
 print x+str(y)
 ```
-#####2 (Using % Op.)
+##### II (Using % Op.)
 ``` python
 print "%s%s"%(x,y)
 ```
-#####3 (Using format fn. Used by me here)
+##### III (Using format fn. Used by me here)
 ``` python
 print "{}{}".format(x,y)
 ```
 
-## 2. Sets & FrozenSets
+## Sets & FrozenSets
 ``` python
 set1 = {1,2,3,1,2,5,2,8,}
 print set1
@@ -73,7 +73,7 @@ set3 = frozenset('lulzsec') ####Cannot add new elements
 print "No. of Elements in FrozenSet_set3 ==> {}".format(len(set3))
 ```
 
-## 3. Testing Complex Numbers and other data types
+## Complex Numbers and other data types
 ``` python
 comp_num1 = 3 + 13j
 print comp_num1
@@ -91,7 +91,7 @@ print "Float :: {}".format(float_num)
 long_num = 111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111L
 print "Long :: {}".format(long_num)
 ```
-## 4. Lists
+## Lists
 ``` python
 list = [11,22,11,'hello']
 list.append('22') #### appending single element
