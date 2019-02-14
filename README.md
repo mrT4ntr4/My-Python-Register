@@ -43,19 +43,22 @@ print type(str_hello) #### To check the dataType
 print ''.join(reversed(str_hello)) #### To reverse a string easily
 ```
 #### Ways to Concatenate string and int 
+``` console
+Output : list12
+```
 
-##### I. (Using str() fn.)
+##### I. Using str() fn.
 ``` python
 x = 'list'
 y = 12
 
 print x+str(y)
 ```
-##### II. (Using % Op.)
+##### II. Using % Op.
 ``` python
 print "%s%s"%(x,y)
 ```
-##### III. (Using format fn. Used by me here)
+##### III. Using format fn. Used by me here
 ``` python
 print "{}{}".format(x,y)
 ```
