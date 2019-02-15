@@ -76,12 +76,14 @@ set2.add('y') #Can add new elements easily
 print set2
 
 set3 = frozenset('lulzsec') #Cannot add new elements
+print 'l' in set3 # Testing if element is present in a set, returns bool
 print "No. of Elements in FrozenSet_set3 = {}".format(len(set3))
 ```
 
 ```console
 set([8, 1, 2, 3, 5])
 set(['y', 'h', 'e', 'l', 'o'])
+True
 No. of Elements in FrozenSet_set3 = 6
 ```
 
