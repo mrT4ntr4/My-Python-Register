@@ -555,8 +555,30 @@ print t1
 NameError: name 't1' is not defined
 ```
 
+# Random File Operations
 
+```python
+import base64 # Using base64 lib just for some fun operations
 
+with open('random.txt','r+') as fl:		# Read & Write both with 'r+'
+	contentList = fl.readlines()
+	beLine = base64.b64encode(str(contentList[3])) 		# base64 encodes the 4th item in list
+	if (contentList[-1] != beLine):
+	 fl.write("\n"+beLine)
+
+#Without List
+with open('random.txt', 'r') as fl:
+	content = fl.read()
+
+print content + " when decoded gives :: " + base64.b64decode(str(contentList[-1]))
+```
+```
+hi
+hello
+hola
+hey
+aGV5Cg== when decoded gives :: hey
+```
 
 
 
