@@ -66,8 +66,8 @@ print "%s%s"%(x,y)
 print "{}{}".format(x,y)
 ```
 
-## Sets & FrozenSets
-```python
+## Sets, FrozenSets and MultiSets
+```python 
 set1 = {1,2,3,1,2,5,2,8,}
 print set1
 
@@ -76,16 +76,93 @@ set2.add('y') #Can add new elements easily
 print set2
 
 set3 = frozenset('lulzsec') #Cannot add new elements
-print 'l' in set3 # Testing if element is present in a set, returns bool
-print "No. of Elements in FrozenSet_set3 = {}".format(len(set3))
+print 'l' in set3 # Testing if element is present in a set, returns 'bool'
+print 's' not in set3 # just opposite of 'in'
+print "No. of Elements in FrozenSet_set3 ==> {}".format(len(set3))
 ```
-
 ```console
 set([8, 1, 2, 3, 5])
 set(['y', 'h', 'e', 'l', 'o'])
 True
-No. of Elements in FrozenSet_set3 = 6
+False
+No. of Elements in FrozenSet_set3 ==> 6
 ```
+```python
+
+set4 = {10,20,30,40,50}
+set5 = {30,40,50,60}
+
+## Operations
+
+### intersection (&)
+print set4.intersection(set5)
+print set4 & set5
+
+### union (|)
+print set4.union(set5)
+print set4 | set5
+
+### difference (-)
+print set4.difference(set5)
+print set4 - set5
+
+### symmetric_difference (&)
+print set4.symmetric_difference(set5)
+print set4 ^ set5
+
+### issubset (<=)
+print set4.issubset(set5)
+print set4 <= set5
+
+### issuperset (>=)
+print set4.issuperset(set5)
+print set4 >= set5
+
+### isdisjoint
+print set4.isdisjoint(set5)
+```
+
+```console
+set([40, 50, 30])
+set([40, 10, 50, 20, 60, 30])
+set([10, 20])
+set([10, 20, 60])
+False
+False
+False
+```
+```python
+set6 = set4 | set5
+set6.add(60)
+set6.add(70)
+print set6
+print len(set6) # duplicates not allowed in sets
+```
+```console
+set([70, 40, 10, 50, 20, 60, 30])
+7
+```
+
+```python
+# multisets.py
+
+from collections import Counter
+multisetCounter = Counter([1,1,2,3])
+print multisetCounter
+
+import multiset # OR Using multiset.py from pypi
+s1 = multiset.Multiset('aab')
+print s1
+
+```
+
+```console
+Counter({1: 2, 2: 1, 3: 1})
+{a, a, b}
+```
+
+
+
 
 ## Complex Numbers and other data types
 ```python
