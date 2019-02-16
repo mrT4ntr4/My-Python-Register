@@ -147,17 +147,18 @@ set([70, 40, 10, 50, 20, 60, 30])
 # multisets.py
 
 from collections import Counter
-multisetCounter = Counter([1,1,2,3])
+multisetCounter = Counter(['a','a','b'])
 print multisetCounter
 
-import multiset # OR Using multiset.py from pypi
+#OR Using multiset.py from pypi.org
+import multiset
 s1 = multiset.Multiset('aab')
 print s1
 
 ```
 
 ```console
-Counter({1: 2, 2: 1, 3: 1})
+Counter({'a': 2, 'b': 1})
 {a, a, b}
 ```
 
